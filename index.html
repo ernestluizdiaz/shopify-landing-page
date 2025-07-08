@@ -11,119 +11,180 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/testimonials.css">
   <link rel="stylesheet" href="styles/transform.css">
+  <link rel="stylesheet" href="styles/results.css">
   <style>
-    .results {
-      margin: 40px 10px;
+    .ingredients {
+      background-color: #f8f8f6;
+      padding: 120px 0;
     }
 
-    .results-header-container {
+    .ingredients-container {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .results-text {
-      background: linear-gradient(to right, #dceafe, #edf5ff);
-      border-radius: 40px;
-      font-size: 12px;
-      font-weight: bold;
-      padding: 15px 20px;
-      color: #1c4ed8;
-      display: inline-block;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 0 80px;
+      gap: 60px;
     }
 
-    .results-header {
-      text-align: center;
+    .ingredients-content {
+      flex: 1;
+      max-width: 500px;
     }
 
-    .video-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .video-card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .video-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .video-thumbnail {
-      position: relative;
-      width: 100%;
-      height: 240px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .video-badge {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: rgba(59, 130, 246, 0.9);
-      color: white;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .video-badge.popular {
-      background: rgba(239, 68, 68, 0.9);
-    }
-
-    .video-content {
-      padding: 25px;
-    }
-
-    .video-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #1f2937;
-      margin-bottom: 10px;
+    .ingredients-header {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
       line-height: 1.3;
     }
 
-    .video-description {
-      color: #6b7280;
-      font-size: 0.95rem;
+    .ingredients-p {
+      font-size: 16px;
+      color: #666;
       line-height: 1.5;
-      margin: 0;
+      margin-bottom: 30px;
     }
 
+    .ingredients-button {
+      background: linear-gradient(to right, #f08a36, #e76b24);
+      color: white;
+      padding: 12px 40px;
+      border-radius: 10px;
+      border: solid black 1px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .ingredients-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .carousel-container {
+      flex: 1;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .ingredient-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      background-size: cover;
+      background-position: center;
+      border: 4px solid #e76b24;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background-color: transparent;
+    }
+
+    .ingredient-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .ingredient-description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      font-size: 60px;
+      color: #333;
+      z-index: 10;
+    }
+
+    .carousel-nav:hover {
+      color: #666;
+    }
+
+    .carousel-nav.prev {
+      left: 20px;
+    }
+
+    .carousel-nav.next {
+      right: 20px;
+    }
+
+    .carousel-indicators {
+      display: none;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .indicator.active {
+      background: #e76b24;
+    }
+
+    /* Responsive design */
     @media (max-width: 768px) {
-      .results-header h2 {
-        font-size: 2rem;
+      .ingredients-container {
+        flex-direction: column;
+        padding: 0 40px;
+        gap: 40px;
       }
 
-      .results-header p {
-        font-size: 1rem;
+      .ingredients-content {
+        text-align: center;
       }
 
-      .video-cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-
+      .ingredients-header {
+        font-size: 24px;
       }
 
-      .video-card {
-        margin: 0 10px;
+      .carousel-container {
+        max-width: 100%;
+      }
+
+      .carousel-slide {
+        padding: 30px 20px;
+      }
+
+      .ingredient-image {
+        width: 150px;
+        height: 150px;
       }
     }
   </style>
@@ -544,7 +605,82 @@
 
       <script src="script/results.js"></script>
     </div>
-  </div>
+
+    <!-- Ingredients Section -->
+    <div class="ingredients">
+      <div class="ingredients-container">
+        <div class="ingredients-content">
+          <div class="ingredients-header">
+            <p>All-natural patented ingredient combination</p>
+          </div>
+          <div class="ingredients-p">
+            <p>We have exclusive rights to Neutein's clinically validated formulation, which means you can't find it
+              anywhere else in the world. Our ingredients include:</p>
+          </div>
+          <div class="ingredients-button">
+            <p>TRY IT TODAY!</p>
+          </div>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-nav prev" onclick="previousSlide()">‹</button>
+            <button class="carousel-nav next" onclick="nextSlide()">›</button>
+
+            <div class="carousel-track" id="carouselTrack">
+              <div class="carousel-slide">
+                <div class="ingredient-image"
+                  style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMTAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjNmFiMDRjIDAlLCAjNGE4NzJhIDEwMCUpIi8+CjxwYXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPHA+YXRoIGQ9Ik0xMDAgMzBMMTIwIDcwSDg0TDEwMCAzMFoiIGZpbGw9IiM0YTg3MmEiLz4KPC9zdmc+')">
+                </div>
+                <div class="ingredient-name">NEUMENTIX™</div>
+                <div class="ingredient-description">
+                  This patented spearmint extract contains proprietary polyphenols clinically shown to increase working
+                  memory, multitasking, and sleep quality.
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="ingredient-image" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);">
+                </div>
+                <div class="ingredient-name">Ginkgo Biloba</div>
+                <div class="ingredient-description">
+                  A powerful antioxidant that supports cognitive function and may help improve memory and concentration
+                  by enhancing blood flow to the brain.
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="ingredient-image" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);">
+                </div>
+                <div class="ingredient-name">Bacopa Monnieri</div>
+                <div class="ingredient-description">
+                  An ancient herb traditionally used to enhance memory formation and cognitive processing, backed by
+                  modern research studies.
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="ingredient-image" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
+                </div>
+                <div class="ingredient-name">Lion's Mane Mushroom</div>
+                <div class="ingredient-description">
+                  A unique mushroom that supports nerve growth factor production and may help maintain healthy cognitive
+                  function as you age.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+            <div class="indicator" onclick="goToSlide(3)"></div>
+          </div>
+        </div>
+      </div>
+      <script src="script/ingredients-carousel.js"></script>
+    </div>
 
 
 

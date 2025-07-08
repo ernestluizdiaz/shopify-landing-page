@@ -1,0 +1,114 @@
+.results {
+      margin: 40px 10px;
+    }
+
+    .results-header-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .results-text {
+      background: linear-gradient(to right, #dceafe, #edf5ff);
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 15px 20px;
+      color: #1c4ed8;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .results-header {
+      text-align: center;
+    }
+
+    .video-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(59, 130, 246, 0.9);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .video-badge.popular {
+      background: rgba(239, 68, 68, 0.9);
+    }
+
+    .video-content {
+      padding: 25px;
+    }
+
+    .video-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .video-description {
+      color: #6b7280;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .results-header h2 {
+        font-size: 2rem;
+      }
+
+      .results-header p {
+        font-size: 1rem;
+      }
+
+      .video-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+      }
+
+      .video-card {
+        margin: 0 10px;
+      }
+    }
