@@ -1,0 +1,12 @@
+   .transform-header {
+      background-color: #1e5ae8;
+      text-align: center;
+      color: white;
+      padding: 30px 0px;
+      margin: 10px 0px;
+      font-weight: lighter;
+    }
+
+    .transform-button {
+      margin-top: 20px;
+    }
