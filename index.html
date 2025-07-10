@@ -5,220 +5,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hero Full Background</title>
-  <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles/hero.css">
   <link rel="stylesheet" href="styles/featured.css">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/testimonials.css">
   <link rel="stylesheet" href="styles/transform.css">
   <link rel="stylesheet" href="styles/results.css">
-  <style>
-    .ingredients {
-      background-color: #f8f8f6;
-      padding: 120px 0;
-    }
-
-    .ingredients-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 80px;
-      gap: 60px;
-    }
-
-    .ingredients-content {
-      flex: 1;
-      max-width: 500px;
-    }
-
-    .ingredients-header {
-      font-size: 28px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 20px;
-      line-height: 1.3;
-    }
-
-    .ingredients-p {
-      font-size: 16px;
-      color: #666;
-      line-height: 1.5;
-      margin-bottom: 30px;
-    }
-
-    .ingredients-button {
-      background: linear-gradient(to right, #f08a36, #e76b24);
-      color: white;
-      padding: 12px 40px;
-      border-radius: 10px;
-      border: solid black 1px;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-
-    .ingredients-button:hover {
-      transform: translateY(-2px);
-    }
-
-    .carousel-container {
-      flex: 1;
-      max-width: 600px;
-      position: relative;
-    }
-
-    .carousel-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .ingredient-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin: 0 auto 30px;
-      background-size: cover;
-      background-position: center;
-      border: 4px solid #e76b24;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      background-color: transparent;
-    }
-
-    .ingredient-name {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    .ingredient-description {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.4;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .carousel-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      width: 80px;
-      height: 80px;
-      cursor: pointer;
-      font-size: 60px;
-      color: #333;
-      z-index: 10;
-    }
-
-    .carousel-nav:hover {
-      color: #666;
-    }
-
-    .carousel-nav.prev {
-      left: 20px;
-    }
-
-    .carousel-nav.next {
-      right: 20px;
-    }
-
-    .carousel-indicators {
-      display: none;
-    }
-
-    .indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #ddd;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .indicator.active {
-      background: #e76b24;
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .ingredients-container {
-        flex-direction: column;
-        padding: 0 40px;
-        gap: 40px;
-      }
-
-      .ingredients-content {
-        text-align: center;
-      }
-
-      .ingredients-header {
-        font-size: 24px;
-      }
-
-      .carousel-container {
-        max-width: 100%;
-      }
-
-      .carousel-slide {
-        padding: 30px 20px;
-      }
-
-      .ingredient-image {
-        width: 150px;
-        height: 150px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles/ingredients.css">
+  <link rel="stylesheet" href="styles/science.css">
+  <link rel="stylesheet" href="styles/neutein.css">
+  <link rel="stylesheet" href="styles/transform-performance.css">
+  <link rel="stylesheet" href="styles/chart.css">
+  <link rel="stylesheet" href="styles/difference.css">
+  <link rel="stylesheet" href="styles/everything.css">
+  <link rel="stylesheet" href="styles/revolution.css">
+  <link rel="stylesheet" href="styles/limited.css">
+  <link rel="stylesheet" href="styles/risk.css">
+  <link rel="stylesheet" href="styles/faq.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/cd3bff5ff2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
     <!-- Hero Section -->
     <div class="hero">
-      <div style="padding-top: 16%;" class="inner">
-        <div class="hero-items">
-          <div class="hero-button">
-            <p>BUY NOW, </p>
-            <p style="font-size: 26px;">GET ONE FREE!</p>
+
+      <div class="hero-items">
+        <div class="hero-button">
+          <h2>BUY NOW, </h2>
+          <p>GET ONE FREE!</p>
+        </div>
+        <div class="timer">
+          <p class="timer-header">
+            ⏰ SALE ENDS IN:
+          </p>
+          <div class="timer-display">
+            <div class="timer-unit" id="hours">03</div>
+            <span class="timer-separator">:</span>
+            <div class="timer-unit" id="minutes">59</div>
+            <span class="timer-separator">:</span>
+            <div class="timer-unit" id="seconds">13</div>
           </div>
-          <div class="timer">
-            <p class="timer-header">
-              ⏰ SALE ENDS IN:
-            </p>
-            <div class="timer-display">
-              <div class="timer-unit" id="hours">03</div>
-              <span class="timer-separator">:</span>
-              <div class="timer-unit" id="minutes">59</div>
-              <span class="timer-separator">:</span>
-              <div class="timer-unit" id="seconds">13</div>
-            </div>
-            <div class="timer-labels">
-              <span class="timer-label">Hours</span>
-              <span class="timer-label">Minutes</span>
-              <span class="timer-label">Seconds</span>
-            </div>
+          <div class="timer-labels">
+            <span class="timer-label">Hours</span>
+            <span class="timer-label minute">Minutes</span>
+            <span class="timer-label">Seconds</span>
           </div>
         </div>
       </div>
+
       <script src="script/hero.js"></script>
     </div>
 
@@ -590,7 +427,7 @@
             <div class="video-card" data-video-id="NjdgcHdzvac" onclick="playYouTubeVideo(this)">
               <div class="video-thumbnail video-thumbnail-1"
                 style="background-image: url('https://img.youtube.com/vi/YE7VzlLtp-4/hqdefault.jpg');">
-                <div class="video-badge popular">⭐ Most Popular</div>
+                <div class="video-badge popular">🙍🏻‍♂️ Creator Story</div>
                 <div class="play-button">▶</div>
               </div>
               <div class="video-content">
@@ -682,8 +519,872 @@
       <script src="script/ingredients-carousel.js"></script>
     </div>
 
+    <!-- Backed by Science -->
+    <div class="science">
+      <div class="inner">
+        <div class="science-header-container">
+          <div class="science-text">
+            🔬 Scientific Validation
+          </div>
+          <div class="science-header">
+            <h2>Back By Real Science, Not Empty Promises</h2>
+            <p>Our formula is the result of years of neuroscience research and clinical testing, with peer-reviewed
+              studies proving its effectiveness.</p>
+          </div>
+        </div>
+
+        <section class="benefits-section">
+          <div class="benefit-card gradient-blue">
+            <div class="benefit-icon blue">
+              🧪
+            </div>
+            <h3 class="benefit-title">Clinical Studies</h3>
+            <p class="benefit-description">
+              Our peer-reviewed studies confirm significant cognitive improvements in healthy adults.
+            </p>
+            <div class="benefit-stat benefit-text-blue">47%</div>
+            <div class="benefit-label">Increase in Focus</div>
+          </div>
+
+          <div class="benefit-card gradient-green">
+            <div class="benefit-icon green">
+              ⚡
+            </div>
+            <h3 class="benefit-title">Fast Acting</h3>
+            <p class="benefit-description">
+              Users report noticeable cognitive enhancement within 30–45 minutes of taking Neutein.
+            </p>
+            <div class="benefit-stat benefit-text-green">30</div>
+            <div class="benefit-label">Minutes to Effect</div>
+          </div>
+
+          <div class="benefit-card gradient-purple">
+            <div class="benefit-icon purple">
+              🛡️
+            </div>
+            <h3 class="benefit-title">Safety Tested</h3>
+            <p class="benefit-description">
+              Manufactured in FDA-approved facilities with rigorous safety and purity testing.
+            </p>
+            <div class="benefit-stat benefit-text-purple">0</div>
+            <div class="benefit-label">Reported Side Effects</div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- How Neutein Works Section -->
+    <div class="neutein-works">
+      <div class="inner">
+        <div class="neutein-header-container">
+          <div class="neutein-text">
+            ⚡ Simple Process
+          </div>
+          <div class="neutein-header">
+            <h2>How Neutein Works</h2>
+            <p>From the moment you take Neutein to lasting cognitive enhancement - here's exactly what happens in your
+              brain.</p>
+          </div>
+        </div>
+
+        <section class="steps-section">
+          <div class="steps-cards">
+            <div class="step-card blue">
+              <div class="step-number">1</div>
+              <div class="step-icon blue">
+                <svg viewBox="0 0 24 24" width="35px" height="35px" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffffff">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="step-title">Take Your Daily Dose</h3>
+              <p class="step-desc">Simply take 2 capsules of Neutein with water in the morning.</p>
+            </div>
+
+            <div class="step-card orange">
+              <div class="step-number">2</div>
+              <div class="step-icon orange">
+                <svg viewBox="0 0 24 24" width="40px" height="40px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M18.4961 10.7088L9.8603 19.5885C9.6207 19.8349 9.22228 19.5503 9.37764 19.2437L12.4518 13.1779C12.553 12.9783 12.408 12.7423 12.1842 12.7423H5.71762C5.45129 12.7423 5.31702 12.4211 5.5041 12.2315L13.5132 4.11699C13.7455 3.88157 14.132 4.14034 14.0029 4.44487L11.706 9.86069C11.6215 10.06 11.7694 10.2805 11.9859 10.2778L18.2773 10.1997C18.5444 10.1964 18.6823 10.5174 18.4961 10.7088Z"
+                      stroke="#ffffff"></path>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="step-title">Feel The Effects</h3>
+              <p class="step-desc">Within 30–45 minutes, experience enhanced focus and mental clarity.</p>
+            </div>
+
+            <div class="step-card purple">
+              <div class="step-number">3</div>
+              <div class="step-icon purple">
+                <svg fill="#ffffff" viewBox="0 0 32 32" width="40px" height="40px" xmlns="http://www.w3.org/2000/svg">
+                  <g id=" SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M 13 4 C 11.089844 4 9.542969 5.386719 9.15625 7.1875 C 6.824219 7.605469 5 9.550781 5 12 C 5 12.246094 5.027344 12.464844 5.0625 12.6875 C 4.417969 13.636719 4 14.753906 4 16 C 4 17.796875 4.894531 19.308594 6.15625 20.40625 C 6.066406 20.761719 6 21.117188 6 21.5 C 6 23.972656 8.027344 26 10.5 26 C 10.527344 26 10.539063 26 10.5625 26 C 11.144531 27.128906 12.152344 28 13.5 28 C 14.476563 28 15.363281 27.589844 16 26.9375 C 16.636719 27.589844 17.523438 28 18.5 28 C 19.847656 28 20.855469 27.128906 21.4375 26 C 21.460938 26 21.472656 26 21.5 26 C 23.847656 26 25.773438 24.171875 25.96875 21.875 L 26 21.875 C 26 21.8125 25.972656 21.75 25.96875 21.6875 C 25.972656 21.625 26 21.5625 26 21.5 C 26 21.128906 25.867188 20.8125 25.78125 20.46875 C 27.078125 19.367188 28 17.828125 28 16 C 28 14.753906 27.582031 13.636719 26.9375 12.6875 C 26.972656 12.464844 27 12.246094 27 12 C 27 9.550781 25.175781 7.605469 22.84375 7.1875 C 22.457031 5.386719 20.910156 4 19 4 C 17.800781 4 16.734375 4.558594 16 5.40625 C 15.265625 4.558594 14.199219 4 13 4 Z M 13 6 C 14.117188 6 15 6.882813 15 8 L 15 10 C 15 11.667969 13.667969 13 12 13 L 12 15 C 13.132813 15 14.160156 14.609375 15 13.96875 L 15 24.5 C 15 25.339844 14.339844 26 13.5 26 C 12.753906 26 12.15625 25.484375 12.03125 24.78125 L 11.84375 23.8125 L 10.875 23.96875 C 10.699219 23.996094 10.589844 24 10.5 24 C 9.109375 24 8 22.890625 8 21.5 C 8 21.191406 8.050781 20.902344 8.15625 20.625 C 8.164063 20.601563 8.179688 20.585938 8.1875 20.5625 C 8.496094 19.792969 9.167969 19.230469 10 19.0625 L 9.59375 17.09375 C 8.550781 17.304688 7.644531 17.859375 7 18.65625 C 6.371094 17.953125 6 17.023438 6 16 C 6 15.0625 6.320313 14.226563 6.875 13.53125 L 7.1875 13.15625 L 7.09375 12.65625 C 7.039063 12.421875 7 12.214844 7 12 C 7 10.332031 8.332031 9 10 9 L 11 9 L 11 8 C 11 6.882813 11.882813 6 13 6 Z M 19 6 C 20.117188 6 21 6.882813 21 8 L 21 9 L 22 9 C 23.667969 9 25 10.332031 25 12 C 25 12.214844 24.960938 12.421875 24.90625 12.65625 L 24.8125 13.15625 L 25.125 13.53125 C 25.679688 14.226563 26 15.0625 26 16 C 26 17.199219 25.488281 18.269531 24.65625 19 C 23.972656 18.394531 23.101563 18 22.125 18 C 21.179688 18 20.328125 18.335938 19.65625 18.90625 L 20.9375 20.4375 C 21.261719 20.164063 21.660156 20 22.125 20 C 23.089844 20 23.859375 20.722656 23.96875 21.65625 C 23.886719 22.972656 22.835938 24 21.5 24 C 21.410156 24 21.300781 23.996094 21.125 23.96875 L 20.15625 23.8125 L 19.96875 24.78125 C 19.84375 25.484375 19.246094 26 18.5 26 C 17.660156 26 17 25.339844 17 24.5 L 17 13.96875 C 17.839844 14.609375 18.867188 15 20 15 L 20 13 C 18.332031 13 17 11.667969 17 10 L 17 8 C 17 6.882813 17.882813 6 19 6 Z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="step-title">Peak Performance</h3>
+              <p class="step-desc">Your brain operates at optimal capacity for 6–8 hours of sustained focus.</p>
+            </div>
+
+            <div class="step-card green">
+              <div class="step-number">4</div>
+              <div class="step-icon green">
+                <svg fill="#ffffff" viewBox="0 0 24 24" width="30px" height="30px" id="up-trend" data-name="Line Color"
+                  xmlns="http://www.w3.org/2000/svg" class="icon line-color">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <polyline id="primary" points="21 6 14 13 11 10 3 18"
+                      style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </polyline>
+                    <polyline id="secondary" points="21 10 21 6 17 6"
+                      style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </polyline>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="step-title">Long-Term Benefits</h3>
+              <p class="step-desc">Consistent use leads to improved memory, learning, and cognition.</p>
+            </div>
+          </div>
+
+          <div class="steps-footer">
+            <h2>Ready To Unlock Your Brain's Full Potential?</h2>
+            <p>Join thousands of professionals, students, and entrepreneurs who trust Neutein for peak cognitive
+              performance.</p>
+            <div class="guarantees">
+              <span>✔ 30-Day Money-Back Guarantee</span>
+              <span>✔ Free Worldwide Shipping</span>
+            </div>
+            <button class="cta-button">BUY NOW, GET ONE FREE!</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Transform Your Performance Section -->
+    <div class="transform-performance">
+      <div class="inner">
+        <div class="transform-performance-header">
+          <h2>Transform Your Mental Performance</h2>
+          <p>Experience the cognitive enhancement that thousands of professionals, students, and entrepreneurs rely on
+            to excel their daily lives.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Laser-Sharp Focus -->
+          <div class="feature-card">
+            <div class="background-decoration"></div>
+            <div class="feature-icon icon-focus">🎯</div>
+            <h3 class="feature-title">Laser-Sharp Focus</h3>
+            <p class="feature-description">Eliminate distractions and maintain deep concentration for hours</p>
+            <div class="feature-stat">+47% Focus Improvement</div>
+          </div>
+
+          <!-- Enhanced Memory -->
+          <div class="feature-card">
+            <div class="background-decoration"></div>
+            <div class="feature-icon icon-memory">🧠</div>
+            <h3 class="feature-title">Enhanced Memory</h3>
+            <p class="feature-description">Better recall, faster learning, and improved information retention</p>
+            <div class="feature-stat">+32% Memory Boost</div>
+          </div>
+
+          <!-- Mental Clarity -->
+          <div class="feature-card">
+            <div class="background-decoration"></div>
+            <div class="feature-icon icon-clarity">💡</div>
+            <h3 class="feature-title">Mental Clarity</h3>
+            <p class="feature-description">Clear brain fog and think with crystal-clear precision</p>
+            <div class="feature-stat">95% Report Clarity</div>
+          </div>
+
+          <!-- Sustained Energy -->
+          <div class="feature-card">
+            <div class="background-decoration"></div>
+            <div class="feature-icon icon-energy">⚡</div>
+            <h3 class="feature-title">Sustained Energy</h3>
+            <p class="feature-description">All-day mental energy without crashes or jitters</p>
+            <div class="feature-stat">8+ Hours Duration</div>
+          </div>
+
+          <!-- Stress Reduction -->
+          <div class="feature-card">
+            <div class="background-decoration"></div>
+            <div class="feature-icon icon-stress">🧘</div>
+            <h3 class="feature-title">Stress Reduction</h3>
+            <p class="feature-description">Stay calm and composed under pressure</p>
+            <div class="feature-stat">-58% Stress Levels</div>
+          </div>
+
+          <!-- Mood Enhancement -->
+          <div class="feature-card">
+            <div class="background-decoration"></div>
+            <div class="feature-icon icon-mood">😊</div>
+            <h3 class="feature-title">Mood Enhancement</h3>
+            <p class="feature-description">Improved motivation and positive mental state</p>
+            <div class="feature-stat">+41% Mood Score</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart">
+      <div class="inner">
+        <div class="chart-carousel">
+          <div class="chart-arrow-desktop">
+            <button class="chart-arrow left" onclick="chartPrevSlide()">&lt;</button>
+          </div>
+
+          <!-- SLIDES WRAPPER -->
+          <div class="chart-slides">
+            <!-- Slide 1 -->
+            <div class="chart-slide active">
+              <div class="chart-description">
+                <div class="chart-header">
+                  <h2>Remember where you put your phone</h2>
+                </div>
+                <div class="chart-p">
+                  <p>Neutein™ is proven to improve your working memory and spatial memory to help you remember where you
+                    left your keys or parked your car. It also provides your brain more "temporary storage" to make you
+                    more
+                    effective during complex tasks.</p>
+                </div>
+                <div class="chart-button">
+                  <p>TRY IT TODAY!</p>
+                </div>
+              </div>
+
+              <div class="chart-image">
+                <img src="https://www.shutterstock.com/image-vector/free-sample-rubber-stamp-on-260nw-2494907295.jpg"
+                  alt="Chart showing memory improvement">
+                <div class="carousel-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="chart-slide">
+              <div class="chart-description">
+                <div class="chart-header">
+                  <h2>Focus longer during the day</h2>
+                </div>
+                <div class="chart-p">
+                  <p>Neutein™ boosts your attention span and helps keep distractions at bay, making it easier to
+                    complete
+                    tasks with clarity and focus all day long.</p>
+                </div>
+
+                <div class="chart-button">
+                  <p>TRY IT TODAY!</p>
+                </div>
+              </div>
+
+              <div class="chart-image">
+                <img src="https://t3.ftcdn.net/jpg/02/69/85/56/360_F_269855658_q9cp7daK0yfyR87DnAeSc2ynkkB0bjVH.jpg"
+                  alt="Chart showing focus improvement">
+                <div class="carousel-dots">
+                  <span class="dot"></span>
+                  <span class="dot active"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDES -->
+
+          <div class="chart-arrows-mobile">
+            <button class="chart-arrow left" onclick="chartPrevSlide()">&lt;</button>
+            <button class="chart-arrow right" onclick="chartNextSlide()">&gt;</button>
+          </div>
+
+          <div class="chart-arrow-desktop">
+            <button class="chart-arrow right" onclick="chartNextSlide()">&gt;</button>
+          </div>
+        </div>
+
+        <script src="script/chart-carousel.js"></script>
+
+      </div>
+    </div>
+
+    <!-- Difference Section -->
+    <div class="difference">
+      <div class="inner">
+        <div class="difference-container">
+          <h2>The Neutein Difference</h2>
+          <div class="info-diff">
+            <div class="info-before">
+              <h3>Before Neutein</h3>
+              <span><i class="fa-solid fa-xmark"></i> Struggling to focus for more than 20 minutes</span>
+              <span><i class="fa-solid fa-xmark"></i> Constant brain fog and mental fatigue</span>
+              <span><i class="fa-solid fa-xmark"></i> Difficulty remembering names and details</span>
+              <span><i class="fa-solid fa-xmark"></i> Afternoon energy crashes</span>
+              <span><i class="fa-solid fa-xmark"></i> Feeling overwhelmed by daily tasks</span>
+            </div>
+            <div class="info-after">
+              <h3>After Neutein</h3>
+              <span><i class="fa-regular fa-circle-check"></i> Deep focus for 4+ hour sessions</span>
+              <span><i class="fa-regular fa-circle-check"></i> Crystal clear thinking all day long</span>
+              <span><i class="fa-regular fa-circle-check"></i> Photographic memory of important details</span>
+              <span><i class="fa-regular fa-circle-check"></i> Sustained energy without crashes</span>
+              <span><i class="fa-regular fa-circle-check"></i> Effortlessly managing complex projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Everything You Get Section -->
+    <div class="everything">
+      <div class="inner">
+        <div class="everything-container">
+          <div class="everything-description">
+            <h2>Everything You Get When You Order Today!</h2>
+            <p>Highly-quality supplement manufactured in FDA-approved facilities with premium packaging and pure
+              ingredients .</p>
+          </div>
+        </div>
+
+        <div class="product"">
+            <!-- Product 1 -->
+            <div class=" product-card">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/043/987/887/small_2x/medicine-3d-icon-png.png"
+            alt="medicine">
+          <div class="product-info">
+            <h3 class="product-title">Neutein™ Memory Booster</h3>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/010/834/922/small/3d-rendering-medicine-bottle-with-some-pills-isolated-png.png"
+            alt="Vitamin C">
+          <div class="product-info">
+            <h3 class="product-title">Vitamin C Immunity Support</h3>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/010/834/894/non_2x/3d-rendering-floating-medicine-box-isolated-png.png"
+            alt="Multivitamin">
+          <div class="product-info">
+            <h3 class="product-title">Daily Multivitamin Essentials</h3>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/011/098/093/non_2x/medicine-capsule-pill-drug-with-bottle-3d-icon-illustration-png.png"
+            alt="Omega-3">
+          <div class="product-info">
+            <h3 class="product-title">Omega-3 Brain Health</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="revolution">
+    <div class="inner">
+      <div class="revolution-container">
+        <div class="revolution-header">
+          <h2>Join the Cognitive Revolution</h2>
+          <p>Thousands of professionals have already transformed their mental performance</p>
+        </div>
 
 
+        <div class="revolution-content">
+          <div class="stat-item">
+            <h2>25,000+</h2>
+            <p>Happy Customers</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-star-item">
+              <h2>4.9</h2>
+              <span>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </div>
+            <p>Average Rating</p>
+          </div>
+
+          <div class="stat-item">
+            <h2>94%</h2>
+            <p>Repeat Customers</p>
+          </div>
+
+          <div class="stat-item">
+            <h2>60</h2>
+            <p>Day Guarantee</p>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="limited-offer">
+    <div class="inner">
+      <div class="limited-container">
+        <div class="limited-header">
+          <h2>Limited-time offer</h2>
+          <p>Try Neutein today & enjoy 60 days risk-free</p>
+        </div>
+
+        <div class="limited-content">
+          <div class="countdown-timer">
+            <div class="countdown-header">
+              SALE ENDS IN:
+            </div>
+            <div class="countdown-display">
+              <div class="time-unit">
+                <div class="time-value" id="limited-hours">03</div>
+                <div class="time-label">Hours</div>
+              </div>
+              <div class="time-separator">:</div>
+              <div class="time-unit">
+                <div class="time-value" id="limited-minutes">59</div>
+                <div class="time-label">Minutes</div>
+              </div>
+              <div class="time-separator">:</div>
+              <div class="time-unit">
+                <div class="time-value" id="limited-seconds">13</div>
+                <div class="time-label">Seconds</div>
+              </div>
+            </div>
+          </div>
+
+          <script src="script/limited-timer.js"></script>
+
+          <div class="offer-card">
+            <div class="best-value-badge">BEST VALUE</div>
+
+            <div class="offer-title">Buy 1 Get 1 FREE</div>
+            <div class="offer-subtitle">Only pay for 1 bottle - get 2 bottles total</div>
+
+            <div class="price-section">
+              <span class="original-price">$79.90</span>
+              <span class="sale-price">$39.95</span>
+              <div class="price-description">You pay $39.95 for 2 bottles</div>
+            </div>
+
+            <div class="savings-text">Save $39.95 with this BOGO deal</div>
+
+            <div class="offer-button">BUY NOW, GET ONE FREE!</div>
+
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <svg class="check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#21c55d" fill-rule="evenodd"
+                      d="M3 10a7 7 0 019.307-6.611 1 1 0 00.658-1.889 9 9 0 105.98 7.501 1 1 0 00-1.988.22A7 7 0 113 10zm14.75-5.338a1 1 0 00-1.5-1.324l-6.435 7.28-3.183-2.593a1 1 0 00-1.264 1.55l3.929 3.2a1 1 0 001.38-.113l7.072-8z">
+                    </path>
+                  </g>
+                </svg>
+                You get: 2 bottles total
+              </div>
+              <div class="benefit-item">
+                <svg class="check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#21c55d" fill-rule="evenodd"
+                      d="M3 10a7 7 0 019.307-6.611 1 1 0 00.658-1.889 9 9 0 105.98 7.501 1 1 0 00-1.988.22A7 7 0 113 10zm14.75-5.338a1 1 0 00-1.5-1.324l-6.435 7.28-3.183-2.593a1 1 0 00-1.264 1.55l3.929 3.2a1 1 0 001.38-.113l7.072-8z">
+                    </path>
+                  </g>
+                </svg>
+                You pay for: 1 bottle ($39.95)
+              </div>
+              <div class="benefit-item">
+                <svg class="check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#21c55d" fill-rule="evenodd"
+                      d="M3 10a7 7 0 019.307-6.611 1 1 0 00.658-1.889 9 9 0 105.98 7.501 1 1 0 00-1.988.22A7 7 0 113 10zm14.75-5.338a1 1 0 00-1.5-1.324l-6.435 7.28-3.183-2.593a1 1 0 00-1.264 1.55l3.929 3.2a1 1 0 001.38-.113l7.072-8z">
+                    </path>
+                  </g>
+                </svg>
+                60-day supply
+              </div>
+              <div class="shipping-item">
+                <svg class="shipping-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                    stroke-width="0.144"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M14 7H16.3373C16.5818 7 16.7041 7 16.8192 7.02763C16.9213 7.05213 17.0188 7.09253 17.1083 7.14736C17.2092 7.2092 17.2957 7.29568 17.4686 7.46863L21.5314 11.5314C21.7043 11.7043 21.7908 11.7908 21.8526 11.8917C21.9075 11.9812 21.9479 12.0787 21.9724 12.1808C22 12.2959 22 12.4182 22 12.6627V15.5C22 15.9659 22 16.1989 21.9239 16.3827C21.8224 16.6277 21.6277 16.8224 21.3827 16.9239C21.1989 17 20.9659 17 20.5 17M15.5 17H14M14 17V7.2C14 6.0799 14 5.51984 13.782 5.09202C13.5903 4.71569 13.2843 4.40973 12.908 4.21799C12.4802 4 11.9201 4 10.8 4H5.2C4.0799 4 3.51984 4 3.09202 4.21799C2.71569 4.40973 2.40973 4.71569 2.21799 5.09202C2 5.51984 2 6.0799 2 7.2V15C2 16.1046 2.89543 17 4 17M14 17H10M10 17C10 18.6569 8.65685 20 7 20C5.34315 20 4 18.6569 4 17M10 17C10 15.3431 8.65685 14 7 14C5.34315 14 4 15.3431 4 17M20.5 17.5C20.5 18.8807 19.3807 20 18 20C16.6193 20 15.5 18.8807 15.5 17.5C15.5 16.1193 16.6193 15 18 15C19.3807 15 20.5 16.1193 20.5 17.5Z"
+                      stroke="#5fd383" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Free priority shipping
+              </div>
+              <div class="benefit-item">
+                <svg class="check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#21c55d" fill-rule="evenodd"
+                      d="M3 10a7 7 0 019.307-6.611 1 1 0 00.658-1.889 9 9 0 105.98 7.501 1 1 0 00-1.988.22A7 7 0 113 10zm14.75-5.338a1 1 0 00-1.5-1.324l-6.435 7.28-3.183-2.593a1 1 0 00-1.264 1.55l3.929 3.2a1 1 0 001.38-.113l7.072-8z">
+                    </path>
+                  </g>
+                </svg>
+                Bonus: Cognitive Enhancement Guide
+              </div>
+              <div class="guarantee-item">
+                <svg class="guarantee-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M20 6C20 6 19.1843 6 19.0001 6C16.2681 6 13.8871 4.93485 11.9999 3C10.1128 4.93478 7.73199 6 5.00009 6C4.81589 6 4.00009 6 4.00009 6C4.00009 6 4 8 4 9.16611C4 14.8596 7.3994 19.6436 12 21C16.6006 19.6436 20 14.8596 20 9.16611C20 8 20 6 20 6Z"
+                      stroke="#5fd383" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                60-Day Money Back Guarantee
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-banner">
+        <div class="banner-text">⏰ BUY ONE GET ONE FREE - SALE ENDS SOON!</div>
+        <div class="banner-subtext">Limited stock available for this special promotion...</div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div> <!-- Adjust width as needed -->
+        </div>
+
+        <script src="script/limited-banner-progressbar.js"></script>
+      </div>
+
+      <div class="trust-badges">
+        <div class="badges-container-1">
+          <div class="badge-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M8.18164 10.7027C8.18164 10.7027 8.18168 8.13513 8.18164 6.59459C8.1816 4.74571 9.70861 3 11.9998 3C14.291 3 15.8179 4.74571 15.8179 6.59459C15.8179 8.13513 15.8179 10.7027 15.8179 10.7027"
+                  stroke="#a3abb5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.50005 11.3932C4.50001 13.1319 4.49995 16.764 4.50007 19.1988C4.5002 21.8911 8.66375 22.5 12.0001 22.5C15.3364 22.5 19.5 21.8911 19.5 19.1988L19.5 11.3932C19.5 10.8409 19.0523 10.3957 18.5 10.3957H5.50004C4.94777 10.3957 4.50006 10.8409 4.50005 11.3932ZM10.5 16.0028C10.5 16.4788 10.7069 16.9065 11.0357 17.2008V18.7529C11.0357 19.3051 11.4834 19.7529 12.0357 19.7529H12.1786C12.7309 19.7529 13.1786 19.3051 13.1786 18.7529V17.2008C13.5074 16.9065 13.7143 16.4788 13.7143 16.0028C13.7143 15.1152 12.9948 14.3957 12.1072 14.3957C11.2195 14.3957 10.5 15.1152 10.5 16.0028Z"
+                  fill="#a3abb5"></path>
+              </g>
+            </svg>
+            <p>Secure Payment</p>
+          </div>
+          <div class="badge-item">
+            <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M6 15H8M3 11H21M3 8H21M12 15H16M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                  stroke="#a3abb5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+            <p>All Major Cards Accepted</p>
+          </div>
+          <div class="badge-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.78799 3C5.96948 2.99999 5.29393 2.99998 4.74393 3.04565C4.17258 3.0931 3.64774 3.19496 3.1561 3.45035C2.42553 3.82985 1.82985 4.42553 1.45035 5.1561C1.19496 5.64774 1.0931 6.17258 1.04565 6.74393C0.999977 7.29393 0.999988 7.96946 1 8.78798V15C1 16.9138 2.344 18.5136 4.13963 18.9072C4.52413 20.1206 5.65937 21 7 21C8.30622 21 9.41746 20.1652 9.8293 19H15.1707C15.5825 20.1652 16.6938 21 18 21C19.4031 21 20.5812 20.0368 20.9092 18.7355C22.0899 18.2016 22.849 16.9282 22.6403 15.5506L22.5007 14.6294C22.1412 12.2568 21.2527 9.99549 19.9009 8.01285L19.7194 7.74665C18.9743 6.65384 17.7372 6 16.4145 6H15C14.9494 6 14.8992 6.00188 14.8495 6.00558C14.7854 5.71074 14.6911 5.42833 14.5497 5.1561C14.1702 4.42553 13.5745 3.82985 12.8439 3.45035C12.3523 3.19496 11.8274 3.0931 11.2561 3.04565C10.7061 2.99998 10.0305 2.99999 9.21202 3H6.78799ZM15 8.71577C15 8.73971 15 8.76377 15 8.78795V17H15.1707C15.5825 15.8348 16.6938 15 18 15C19.089 15 20.0425 15.5803 20.5682 16.4485C20.6576 16.2709 20.6953 16.0643 20.6629 15.8502L20.5233 14.929C20.2087 12.853 19.4313 10.8743 18.2484 9.13952L18.0669 8.87333C17.6944 8.32692 17.0758 8 16.4145 8L15 8V8.71577ZM13 8.83C13 7.95898 12.9992 7.36686 12.9612 6.90945C12.9242 6.46402 12.8572 6.23663 12.7748 6.07805C12.5851 5.71277 12.2872 5.41493 11.9219 5.22517C11.7634 5.1428 11.536 5.07578 11.0905 5.03879C10.6331 5.0008 10.041 5 9.17 5H6.83C5.95898 5 5.36686 5.0008 4.90945 5.03879C4.46402 5.07578 4.23663 5.1428 4.07805 5.22517C3.71277 5.41493 3.41493 5.71277 3.22517 6.07805C3.1428 6.23663 3.07578 6.46402 3.03879 6.90945C3.0008 7.36686 3 7.95898 3 8.83V15C3 15.8316 3.50759 16.5447 4.22985 16.8463C4.68191 15.7621 5.75196 15 7 15C8.30622 15 9.41746 15.8348 9.8293 17H13V8.83ZM8 18C8 17.4477 7.55229 17 7 17C6.44772 17 6 17.4477 6 18C6 18.5523 6.44772 19 7 19C7.55229 19 8 18.5523 8 18ZM17 18C17 17.4477 17.4477 17 18 17C18.5523 17 19 17.4477 19 18C19 18.5523 18.5523 19 18 19C17.4477 19 17 18.5523 17 18Z"
+                  fill="#a5adb7"></path>
+              </g>
+            </svg>
+            <p>Free Worldwide Shipping</p>
+          </div>
+          <div class="badge-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M11.302 21.6149C11.5234 21.744 11.6341 21.8086 11.7903 21.8421C11.9116 21.8681 12.0884 21.8681 12.2097 21.8421C12.3659 21.8086 12.4766 21.744 12.698 21.6149C14.646 20.4784 20 16.9084 20 12V6.6C20 6.04207 20 5.7631 19.8926 5.55048C19.7974 5.36198 19.6487 5.21152 19.4613 5.11409C19.25 5.00419 18.9663 5.00084 18.3988 4.99413C15.4272 4.95899 13.7136 4.71361 12 3C10.2864 4.71361 8.57279 4.95899 5.6012 4.99413C5.03373 5.00084 4.74999 5.00419 4.53865 5.11409C4.35129 5.21152 4.20259 5.36198 4.10739 5.55048C4 5.7631 4 6.04207 4 6.6V12C4 16.9084 9.35396 20.4784 11.302 21.6149Z"
+                  stroke="#a3abb5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+            <p>60-Day Money Back Guarantee</p>
+          </div>
+        </div>
+
+        <div class="badges-container-2">
+          <div class="badge-item">
+            <p>SSL Encrypted</p>
+          </div>
+          <div class="badge-item">
+            <p>FDA Approved Facility</p>
+          </div>
+          <div class="badge-item">
+            <p>GMP Certified</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="risk-free">
+    <div class="inner">
+      <div class="risk-free-container">
+        <div class="icon">
+          <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M20 6C20 6 19.1843 6 19.0001 6C16.2681 6 13.8871 4.93485 11.9999 3C10.1128 4.93478 7.73199 6 5.00009 6C4.81589 6 4.00009 6 4.00009 6C4.00009 6 4 8 4 9.16611C4 14.8596 7.3994 19.6436 12 21C16.6006 19.6436 20 14.8596 20 9.16611C20 8 20 6 20 6Z"
+                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg>
+        </div>
+
+        <p class="subtitle">
+          We're so confident in Neutein's effectiveness that we offer a complete money-back guarantee.
+          If you don't experience significant cognitive improvement within 60 days, we'll refund every
+          penny – no questions asked.
+        </p>
+
+        <div class="risk-steps-container">
+          <div class="risk-steps-header">
+            <h2>Here's How It Works:</h2>
+          </div>
+          <div class="risk-steps">
+            <div class="risk-step">
+              <div class="risk-step-number blue">1</div>
+              <h2>Try Neutein</h2>
+              <p>Take Neutein daily for up to 60 days and experience the cognitive benefits</p>
+            </div>
+            <div class="risk-step">
+              <div class="risk-step-number green">2</div>
+              <h2>Not Satisfied?</h2>
+              <p>Contact our support team within 60 days if you're not completely satisfied</p>
+            </div>
+            <div class="risk-step">
+              <div class="risk-step-number purple">3</div>
+              <h2>Get Full Refund</h2>
+              <p>Receive a complete refund – no questions, no hassle, no fine print</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="guarantee-note">
+          <strong>💡 Why We Can Offer This Guarantee:</strong>
+          Over 94% of our customers reorder Neutein because they experience remarkable improvements in focus,
+          memory, and mental clarity. We stand behind our product because we know it works.
+        </div>
+
+        <div class="risk-button">
+          <p>Buy Now, Get one FREE!</p>
+        </div>
+
+        <p class="risk-footer-text">Join 25,000+ satisfied customers who’ve transformed their cognitive performance</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="inner">
+      <div class="faq-container">
+        <span class="faq-header"> Frequently Asked Questions</span>
+        <span class="faq-sub-head">Get answers to the most common questions about Neutein</span>
+        <div class="faq-sub-container">
+          <div class="faq-item">
+            <div class="faq-question">How quickly will I see results?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Is Neutein safe to use daily?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Will I experience any side effects?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How is Neutein different from other nootropics?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can I take Neutein with coffee or other supplements?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What if Neutein doesn't work for me?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How long does shipping takes?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Is this a subscription service?</div>
+            <div class="faq-answer">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum."</div>
+          </div>
+        </div>
+        <div class="faq-footer">
+          <span>Still have questions?</span>
+          <div class="faq-info-row">
+            <span><i class="fa-solid fa-envelope"></i> support@neutein.com &#x2022;</span>
+            <span><i class="fa-solid fa-phone"></i> 1-800-NEUTEIN (24/7 Support)</span>
+          </div>
+        </div>
+      </div>
+      <script src="script/faq-accordion.js"></script>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="inner">
+      <div class="footer-container">
+        <div class="bubbles">
+          <div class="fda bubble"><i class="fa-solid fa-check"></i> &nbsp; FDA Approved Facility</div>
+          <div class="third bubble"><i class="fa-solid fa-check"></i> &nbsp; Third-Party Tested</div>
+          <div class="gmp bubble"><i class="fa-solid fa-check"></i> &nbsp; GMP Certified</div>
+          <div class="day bubble">
+            <i class="fa-solid fa-shield"></i>&nbsp;
+            <i class="fa-solid fa-check"></i> &nbsp; 30-Day Guarantee
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-item">
+            <i class="fa-solid fa-lock"></i>
+            <span>SSL Secured</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Secure Payments</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-truck"></i>
+            <span>Free Shipping</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>24/7 Support</span>
+          </div>
+        </div>
+
+        <div class="info-col">
+          <div class="col-item-big">
+            <h4>NEUTEIN</h4>
+            <span class="footer-neutein-info">
+              The world's most advanced cognitive enhancement supplement, trusted by over 50,000 professionals
+              worldwide.
+            </span>
+            <div class="sub-info">
+              <span><i class="fa-solid fa-envelope"></i> support@neutein.com</span>
+              <span><i class="fa-solid fa-phone"></i> 1-800-NEUTEIN</span>
+              <span><i class="fa-solid fa-clock"></i> 24/7 Customer Support</span>
+            </div>
+          </div>
+          <div class="col-item-group">
+            <div class="col-item">
+              <h5>Legal</h5>
+              <span>Privacy Policy</span>
+              <span>Terms of Service</span>
+              <span>Refund Policy</span>
+              <span>Shipping Info</span>
+              <span>Contact Us</span>
+            </div>
+            <div class="col-item">
+              <h5>Certifications</h5>
+              <span><i class="fa-solid fa-award"></i>
+                FDA Registered Facility</span>
+              <span><i class="fa-solid fa-microscope"></i> Third-Party Lab Tested</span>
+              <span><i class="fa-solid fa-square-check"></i> GMP Certified Manfacturing</span>
+              <span><i class="fa-solid fa-seedling"></i> Natural Ingredients</span>
+              <span><img src="assets/img/us-flag.png" class="flag"> Made in USA</span>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="footer-rights">
+          <span class="foot-head"><i class="fa-regular fa-copyright"></i> 2025 Neutein. All rights
+            reserved.</span>
+          <span class="foot-sub">*These statements have not been evaluated by the Food and Drug Administration. This
+            product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary.
+            Always consult with a qualified healthcare professional before making any changes to your health and
+            wellness routine.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
 
 </html>

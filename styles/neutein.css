@@ -1,0 +1,224 @@
+  .neutein-works {
+      background-color: #fbfbfc;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    .neutein-header-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .neutein-text {
+      background: linear-gradient(to right, #f2e6ff, #e9d6ff);
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 15px 20px;
+      color: #1c4ed8;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .neutein-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .neutein-header h2 {
+      font-size: 2.5rem;
+    }
+
+    .neutein-header p {
+      margin-top: 20px
+    }
+
+    .steps-section {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .steps-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+
+    .step-card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 260px;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: white;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 12px;
+      box-shadow: 0 0 0 2px;
+    }
+
+    .step-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .step-desc {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Colored borders and number outlines */
+
+    .step-icon.blue {
+      background: #2463eb;
+    }
+
+    .step-icon.orange {
+      background: #ca8a03;
+    }
+
+    .step-icon.purple {
+      background: #9333e9;
+    }
+
+    .step-icon.green {
+      background: #16a349;
+    }
+
+    .step-card.blue {
+      border-color: #dbe9fe;
+    }
+
+    .step-card.blue .step-number {
+      color: #175aea;
+      background-color: #dbe9fe;
+      box-shadow: 0 0 0 2px #dbe9fe;
+    }
+
+    .step-card.orange {
+      border-color: #feef89;
+    }
+
+    .step-card.orange .step-number {
+      color: #ca8a03;
+      background-color: #fef9c3;
+      box-shadow: 0 0 0 2px #feef89;
+    }
+
+    .step-card.purple {
+      border-color: #e8d4ff;
+    }
+
+    .step-card.purple .step-number {
+      color: #8b26e8;
+      background-color: #e8d4ff;
+      box-shadow: 0 0 0 2px #e8d4ff;
+    }
+
+    .step-card.green {
+      border-color: #dff3e6;
+    }
+
+    .step-card.green .step-number {
+      color: #10b981;
+      background-color: #dcfce6;
+      box-shadow: 0 0 0 2px #dff3e6;
+    }
+
+    /* Footer box */
+    .steps-footer {
+      background: linear-gradient(to right, #eef3fc, #e6fbf3);
+      padding-top: 40px;
+      padding-bottom: 20px;
+      border-radius: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+     @media (max-width: 768px) {
+      .steps-footer{
+      padding-bottom: 50px;
+      }
+     }
+
+    .steps-footer h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .steps-footer p {
+      color: #444;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .guarantees {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      color: #10b981;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      background: #ea7d4e;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+      position: absolute;
+      bottom: -20px;
+      /* adjust to how much you want it to "float" */
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:hover {
+      background: #d46331;
+    }

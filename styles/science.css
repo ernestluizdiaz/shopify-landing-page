@@ -1,0 +1,143 @@
+    .science {
+      margin: 40px 10px;
+    }
+
+    .science-header-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .science-text {
+      background: linear-gradient(to right, #dceafe, #edf5ff);
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 15px 20px;
+      color: #1c4ed8;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .science-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .science-header p {
+      margin-top: 10px
+    }
+
+    .benefits-section {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding-top: 80px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-wrap: wrap;
+    }
+
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 320px;
+      flex: 1;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .benefit-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: white;
+    }
+
+    .benefit-icon.blue {
+      background-color: #2463eb;
+    }
+
+    .benefit-icon.green {
+      background-color: #16a349;
+    }
+
+    .benefit-icon.purple {
+      background-color: #9333e9;
+    }
+
+    .benefit-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .benefit-description {
+      font-size: 15px;
+      color: #4B5563;
+      margin-bottom: 25px;
+    }
+
+    .benefit-stat {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .benefit-label {
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    /* Color variations */
+    .gradient-blue {
+      background: linear-gradient(to right, #ebf3fe, #ddebfe);
+    }
+
+    .gradient-green {
+      background: linear-gradient(to right, #edfdf2, #ddfce7);
+    }
+
+    .gradient-purple {
+      background: linear-gradient(to right, #f9f3ff, #f3e9ff);
+    }
+
+    .benefit-text-blue {
+      color: #2563eb;
+    }
+
+    .benefit-text-green {
+      color: #10b981;
+    }
+
+    .benefit-text-purple {
+      color: #8b5cf6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .benefits-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .benefit-card {
+        max-width: 100%;
+      }
+    }

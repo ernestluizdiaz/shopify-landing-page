@@ -1,0 +1,187 @@
+ .ingredients {
+      background-color: #f8f8f6;
+      padding: 120px 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .ingredients-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+      gap: 60px;
+    }
+
+    .ingredients-content {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .ingredients-header {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .ingredients-p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .ingredients-button {
+      background: linear-gradient(to right, #f08a36, #e76b24);
+      color: white;
+      padding: 12px 80px;
+      border-radius: 10px;
+      border: solid black 1px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    @media (max-width: 1024px) {
+    .ingredients-container {
+      max-width: 910px;
+      gap: 0px;
+    }
+
+    .ingredients-button {
+      padding: 12px 80px;
+      font-size: 16px;
+    }
+    }
+
+    .ingredients-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .carousel-container {
+      flex: 1;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .ingredient-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background-color: transparent;
+    }
+
+    .ingredient-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .ingredient-description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      font-size: 60px;
+      color: #333;
+      z-index: 10;
+    }
+
+    .carousel-nav:hover {
+      color: #666;
+    }
+
+    .carousel-nav.prev {
+      left: 20px;
+    }
+
+    .carousel-nav.next {
+      right: 20px;
+    }
+
+    .carousel-indicators {
+      display: none;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .indicator.active {
+      background: #e76b24;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .ingredients-container {
+        flex-direction: column;
+        padding: 0 40px;
+        gap: 40px;
+      }
+
+      .ingredients-content {
+        text-align: center;
+      }
+
+      .ingredients-header {
+        font-size: 24px;
+      }
+
+      .carousel-container {
+        max-width: 100%;
+        margin-top: 65px !important;
+      }
+
+      .carousel-slide {
+        padding: 30px 20px;
+      }
+
+      .ingredient-image {
+        width: 150px;
+        height: 150px;
+      }
+    }

@@ -1,0 +1,235 @@
+ .footer {
+      background-color: #111827;
+      padding-top: 60px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .bubbles {
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .bubble {
+      padding: 1.5vh 1.5vw;
+      border-radius: 25vw;
+      border: none;
+    }
+
+    i {
+      background-color: transparent;
+    }
+
+    .fda {
+      background-color: #16a251;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .third {
+      background-color: #2363ef;
+      font-size: 14px;
+      font-weight: bold;
+
+    }
+
+    .gmp {
+      background-color: #9134e7;
+      font-size: 14px;
+      font-weight: bold;
+
+    }
+
+    .day {
+      background-color: #e45b0b;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+
+    .info-row {
+    display: flex;
+    flex-wrap: wrap;         /* allows wrapping */
+    justify-content: center;
+    gap: 20px;                /* smaller gap for tighter layout */
+    font-size: 14px;
+    margin-top: 20px;
+    color: #d1d5db;
+  }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+      color: #d1d5db;
+    }
+
+    .info-col {
+      display: flex;
+      gap: 3vw;
+      flex-wrap: wrap;
+      margin-top: 5vh;
+      font-size: 2.5vh;
+      color: #d1d5db;
+    }
+
+    .col-item-big {
+      flex: 1;
+      min-width: 250px;
+      padding-right: 34vw;
+    }
+
+    .col-item-group {
+      display: flex;
+      flex: 2;
+      flex-direction: row;
+    }
+
+    .col-item {
+      max-width: 240px;
+      display: flex;
+      flex-direction: column;
+      flex: 3;
+    }
+
+    .col-item-big h4 {
+      color: #61aaf9;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .col-item h5 {
+      font-size: 18px;
+      margin-bottom: 3vh;
+    }
+
+    .col-item span {
+      margin-bottom: 2vh;
+      font-size: 14px;
+    }
+
+    .footer-neutein-info {
+      font-size: 14px;
+      margin-bottom: 2vh;
+      width: 20vw;
+    }
+
+    .sub-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2vh;
+      font-size: 14px;
+    }
+
+    .flag {
+      vertical-align: middle;  
+      width: 14px;
+      height: 20px;
+    }
+
+    .fa-square-check {
+      color: #16a251;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #cccccc67;
+      margin: 4vh 0;
+    }
+
+    .footer-rights {
+      color: #d1d5db;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .foot-head {
+      font-size: 13px;
+      margin-bottom: 2vh;
+    }
+
+    .foot-sub {
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+
+    @media (max-width: 1024px) {
+      .footer-container {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+    .bubbles {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .col-item-big{
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .col-item-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sub-info {
+      line-height: 1.5;
+    }
+
+    .info-col {
+      flex-direction: row;
+      align-items: center;
+      align-items: flex-start;
+    }
+
+    .bubble {
+      margin-bottom: 1.5vh;
+      padding: 1vh 5%;
+      text-align: center;
+    }
+
+    .info-item {
+      margin-bottom: 1.5vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1vw;
+    }
+
+    .footer-neutein-info {
+      line-height: 1.8;
+      margin-bottom: 2vh;
+      width: 40vw;
+    }
+
+    .sub-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2vh;
+    }
+    }
+      
+    @media (max-width: 480px) {
+      .info-item {
+        width: 45%;             /* roughly half the row */
+        justify-content: center;
+        text-align: center;
+      }
+
+      .info-row {
+        gap: 10px 5%;           /* vertical and horizontal spacing */
+      }
+    }
